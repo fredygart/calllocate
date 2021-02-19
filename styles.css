@@ -1,0 +1,44 @@
+body{margin-left:15%; padding:10px; margin-bottom:100px; width:600px; font-family: 'Roboto'; font-size: 14px; color: #222;}
+.conv{transition: 0.2s; padding:20px; background: #a7ffa7; background-image: linear-gradient(to bottom right,#81fbb8, #28c76f); border-radius: 0px 0px 50px 50px; box-shadow: 4px 4px 8px grey; margin-bottom:15px;}
+.convx{padding:10px; background: #ffd2d2; margin-bottom:15px;}
+.conv:hover{ cursor: default; background: orange; background-image: linear-gradient(to bottom right,#fccf31, #f55555); border-radius: 50px 50px 0px 0px;}
+.conv a:hover{background: #00ffff;}
+.del{color:red; text-decoration:line-through;}
+
+.background{
+position: fixed; width:100%; min-height:100%; top:0px; left:0px; z-index:-98;
+-webkit-transform: scaleX(-1); transform: scaleX(-1);
+}
+#bgb{position: fixed; min-width:100%; min-height:100%; top:0px; left:0px; z-index:-99;}
+
+.srchB{width:300px; position: relative; margin-left:40%; padding:10px;}
+#topIcon{position: fixed; bottom:0px; right:0px; text-align: right; cursor:pointer;}
+#topIcon span{display: none;}
+#topIcon img{width: 32px;}
+#topIcon:hover span{display: block;}
+#topIcon:hover img{width: 64px;}
+
+li { margin: 0; padding: 0; }
+ul { margin: 0; padding: 0; }
+
+#ttle{color: orange;}
+#cnt{position: relative; left: 0px; background: #555; font-weight: bold; padding: 2px;}
+#hExp{position: relative; left: -80%; padding: 6px; background-color: pink; color: red; cursor: pointer; border-radius: 10px;}
+
+#toppb{transition: top 2s; position: absolute; width: 600px; height: 50px; background: white; top:-60px; padding: 5px; border-radius: 10px;box-shadow: 4px 4px 8px #bbb;}
+#toppb p{cursor: pointer; margin: 10px; padding: 10px; display: table-cell; text-align: center;}
+#toppb:hover{top: 0px;}
+#toppb p:hover{color: orange;}
+
+.modal { display: none; position: fixed;  z-index: 1; padding-top: 50px;  left: 0; top: 0; width: 100%;  height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);} .modal-content { background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888; width: 60%; max-width:400px; border-radius:20px; } .close { color: #aaaaaa; float: right; font-size: 30px; font-weight: bold; } .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+
+.w3-animate-top{position:relative;animation:animatetop 2s}@keyframes animatetop{from{top:-1000px;opacity:0} to{top:0;opacity:1}}
+.w3-animate-opacity{animation:opac 5s}@keyframes opac{from{opacity:0} to{opacity:1}}
+
+@media only screen and (max-width: 700px) {
+body { width:90%; margin-left:0px; margin-top:50px; }
+.srchB{ margin-left:20px; }
+#toppb{width: 360px;top: 0px;}
+.sImg{width: 25%;}
+#hExp{left: -20px;}
+}
