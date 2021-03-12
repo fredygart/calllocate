@@ -4,6 +4,7 @@ body{margin-left:15%; padding:10px; margin-bottom:100px; width:600px; font-famil
 .conv:hover{ cursor: default; background: orange; background-image: linear-gradient(to bottom right,#fccf31, #f55555); border-radius: 50px 50px 0px 0px;}
 .conv a:hover{background: #00ffff;}
 .del{color:red; text-decoration:line-through;}
+.conv .green{color: green; }
 
 .background{
 position: fixed; width:100%; min-height:100%; top:0px; left:0px; z-index:-98;
