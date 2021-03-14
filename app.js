@@ -36,7 +36,7 @@ function rot(s, i) {
     return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + i) ? c : c - 26);
   });
 }
-//modal_script
+//modal script
 var modal = document.getElementById("myModal");
 var modalContent = document.getElementById("modalContent");
 function openModal(){ modal.style.display = "block"; }
@@ -59,7 +59,7 @@ function fFecha(ff){
 return String(ff).slice(0,4)+"|"+ms[Number(String(ff).slice(4,6)-1)]+"|"+String(ff).slice(6,8);
 }
 
-document.getElementById("ttle").innerHTML = (function(){return (validar == 1)?"In the middle of <ins>dificulty</ins> lies <b style='color:#222;'>opportunity.</b>":"En medio de la <ins>dificultad</ins> yace la <b style='color:#222;'>oportunidad.</b>";})()+" <span style='background: #81fbb8; color: #222;'>["+(function(){return (validar == 1)?"PageUpdatedOn":"Actualización";})()+":"+fFecha(fechaUpdate)+"]</span>";
+document.getElementById("ttle").innerHTML = (function(){return (validar == 1)?"In the middle of <ins>dificulty</ins> lies <b style='color:#222;'>opportunity.</b>":"En medio de la <ins>dificultad</ins> yace la <b style='color:#222;'>oportunidad.</b>";})()+" <span style='background: #81fbb8; color: #222; border-radius: 10px; padding: 6px;'>["+(function(){return (validar == 1)?"PageUpdatedOn":"Actualización";})()+":"+fFecha(fechaUpdate)+"]</span>";
 
 var hiderN = true;
 var expH = document.getElementsByClassName("convx");
