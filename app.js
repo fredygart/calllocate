@@ -36,7 +36,7 @@ function rot(s, i) {
     return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + i) ? c : c - 26);
   });
 }
-//modal script
+//modal_script
 var modal = document.getElementById("myModal");
 var modalContent = document.getElementById("modalContent");
 function openModal(){ modal.style.display = "block"; }
