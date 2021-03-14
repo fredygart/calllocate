@@ -1,6 +1,6 @@
-body{margin-left:15%; padding:10px; margin-bottom:100px; width:600px; font-family: 'Roboto'; font-size: 14px; color: #222;}
+body{margin-left:10%; padding:10px; margin-bottom:100px; width:80%; font-family: 'Roboto'; font-size: 14px; color: #222;}
 .conv{transition: 0.2s; padding:20px; background: #a7ffa7; background-image: linear-gradient(to bottom right,#81fbb8, #28c76f); border-radius: 0px 0px 50px 50px; box-shadow: 4px 4px 8px grey; margin-bottom:15px;}
-.convx{padding:10px; background: #ffd2d2; margin-bottom:15px;}
+.convx{padding:10px; background: #ffd2d2; margin-bottom:15px; }
 .conv:hover{ cursor: default; background: orange; background-image: linear-gradient(to bottom right,#fccf31, #f55555); border-radius: 50px 50px 0px 0px;}
 .conv a:hover{background: #00ffff;}
 .del{color:red; text-decoration:line-through;}
@@ -12,7 +12,7 @@ position: fixed; width:100%; min-height:100%; top:0px; left:0px; z-index:-98;
 }
 #bgb{position: fixed; min-width:100%; min-height:100%; top:0px; left:0px; z-index:-99;}
 
-.srchB{width:300px; position: relative; margin-left:40%; padding:10px;}
+.srchB{width:300px; position: relative; margin-left:0%; padding:10px;}
 #topIcon{position: fixed; bottom:0px; right:0px; text-align: right; cursor:pointer;}
 #topIcon span{display: none;}
 #topIcon img{width: 32px;}
@@ -22,9 +22,11 @@ position: fixed; width:100%; min-height:100%; top:0px; left:0px; z-index:-98;
 li { margin: 0; padding: 0; }
 ul { margin: 0; padding: 0; }
 
-#ttle{color: orange;}
-#cnt{position: relative; left: 0px; background: #222; font-weight: bold; padding: 2px;}
-#hExp{position: relative; left: -80%; padding: 6px; background-color: pink; color: red; cursor: pointer; border-radius: 10px;}
+#ttle{color: orange; margin-top: 10px;}
+#cnt{position: relative; left: 0px; background: #222; font-weight: bold; padding: 4px; border-radius:12px;}
+#hExp{position: relative; left: 0%; padding: 6px; background-color: pink; color: red; cursor: pointer; border-radius: 10px;}
+
+#inpt1{width:140px;}
 
 #toppb{transition: top 2s; position: absolute; width: 600px; height: 50px; background: white; top:-60px; padding: 5px; border-radius: 10px;box-shadow: 4px 4px 8px #bbb;}
 #toppb p{cursor: pointer; margin: 10px; padding: 10px; display: table-cell; text-align: center;}
@@ -39,7 +41,7 @@ ul { margin: 0; padding: 0; }
 @media only screen and (max-width: 700px) {
 body { width:90%; margin-left:0px; margin-top:50px; }
 .srchB{ margin-left:20px; }
-#toppb{width: 360px;top: 0px;}
+#toppb{width: 85%;top: 0px;}
 .sImg{width: 25%;}
 #hExp{left: -20px;}
 }
