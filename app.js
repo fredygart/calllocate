@@ -6,7 +6,7 @@ var ms = (function(){return (validar == 1)?["January","February","March","April"
 var d = new Date();
 var monthx = d.getMonth()+1;
 var fechaActual = Number(String(d.getFullYear()) + (function(){ return (monthx<10) ? String("0"+monthx):String(monthx); })() + (function(){return (d.getDate()<10)?String("0"+d.getDate()):String(d.getDate())})());
-var fechaUpdate = 20210217;
+var fechaUpdate = 20210312;
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -22,7 +22,7 @@ xmlhttp.send();
 
 function buildData(){
 for(x in data){
-demo.innerHTML += (function(){return (Number(this.data[x].fecha)<fechaActual)?"<li class='convx'>":"<li class='conv'><b>"})()+data[x].name+"</b><br>"+data[x].des+"<br>---<br>"+(function(){return (validar == 1)?"Subject: ":"Tema: ";})()+data[x].sub+"<br>"+(function(){return (validar == 1)?"Amount: <ins class='green'>":"Cantidad: <ins class='green'>";})()+data[x].amount+"</ins><br>"+(function(){return (validar == 1)?"Type: ":"Tipo: ";})()+data[x].typ+"<br>"+(function(){return (validar == 1)?"Origin: ":"Origen: ";})()+data[x].cty+"<br>"+"<a href='"+data[x].lnk+(function(){return (validar == 1)?"'>More information</a>":"'>Más información</a>";})()+"<br>"+(function(){return (validar == 1)?" Deadline: ":" Fecha límite: ";})()+(function(){return (Number(this.data[x].fecha)<fechaActual)?"<span class='del'>"+fFecha(this.data[x].fecha)+(function(){return (validar == 1)?" [expired]</span>":" [vencida]</span>";})():fFecha(this.data[x].fecha);})()+"</li>";
+demo.innerHTML += (function(){return (Number(this.data[x].fecha)<fechaActual)?"<li class='convx'>":"<li class='conv'><b>"})()+rot(data[x].name, +13)+"</b><br>"+rot(data[x].des, +13)+"<br>---<br>"+(function(){return (validar == 1)?"Subject: ":"Tema: ";})()+data[x].sub+"<br>"+(function(){return (validar == 1)?"Amount: <ins class='green'>":"Cantidad: <ins class='green'>";})()+data[x].amount+"</ins><br>"+(function(){return (validar == 1)?"Type: ":"Tipo: ";})()+data[x].typ+"<br>"+(function(){return (validar == 1)?"Origin: ":"Origen: ";})()+data[x].cty+"<br>"+"<a href='"+rot(data[x].lnk, +13)+(function(){return (validar == 1)?"'>More information</a>":"'>Más información</a>";})()+"<br>"+(function(){return (validar == 1)?" Deadline: ":" Fecha límite: ";})()+(function(){return (Number(this.data[x].fecha)<fechaActual)?"<span class='del'>"+fFecha(this.data[x].fecha)+(function(){return (validar == 1)?" [expired]</span>":" [vencida]</span>";})():fFecha(this.data[x].fecha);})()+"</li>";
 }
 setTimeout(function() {
 var openC = document.getElementsByClassName("conv").length;
@@ -31,7 +31,11 @@ cnt.innerHTML = "<span style='color: orange;'>["+(function(){return (validar == 
 }, 3000);
 demo.setAttribute("class","w3-animate-top");
 }
-
+function rot(s, i) {
+  return s.replace(/[a-zA-Z]/g, function(c) {
+    return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + i) ? c : c - 26);
+  });
+}
 //modal script
 var modal = document.getElementById("myModal");
 var modalContent = document.getElementById("modalContent");
